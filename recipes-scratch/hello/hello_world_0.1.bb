@@ -11,8 +11,8 @@ S="${WORKDIR}"
 
 do_compile() {
 	${CXX} hello.c -o hello
-
+}
 do_install() {
-	install -d -m 0755 ${D}${bindir}
-	install -m 0755 ${S}/hello ${D}${bindir}/
+	install -d -m 0755 ${D}/${bindir}
+	install -m 0755 ${S}/hello ${D}/${bindir}
 }
