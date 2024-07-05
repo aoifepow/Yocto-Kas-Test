@@ -11,3 +11,4 @@ inherit core-image
 
 IMAGE_ROOTFS_SIZE ?= "8192"
 
+IMAGE_FEATURES = " debug-tweaks"
