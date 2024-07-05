@@ -26,8 +26,12 @@ S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE = "PREFIX=${D}${bindir}"
 
+TARGET_CC_ARCH += "${LDFLAGS}"
+
 do_compile () {
 	# You will almost certainly need to add additional arguments here
+	${CXX} factorial.c -o factorial
+	install -d -m 0755 ${D}/${bindir}
 	oe_runmake
 }
 
